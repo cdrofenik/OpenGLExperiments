@@ -38,7 +38,6 @@ int tutorial_1(GLFWwindow* window)
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
 	do{
-
 		// Swap buffers
 		glfwSwapBuffers(window);
 		glfwPollEvents();

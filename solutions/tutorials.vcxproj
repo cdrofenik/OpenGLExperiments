@@ -47,12 +47,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\include;..\external\3rdParty\AntTweakBar-1.16\include;..\external\3rdParty\glfw-3.0.3\include\GLFW;..\external\3rdParty\glm-0.9.4.0;..\external\3rdParty\glew-1.9.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\external\3rdParty\assimp\include;..\external\3rdParty\AntTweakBar-1.16\include;..\external\3rdParty\glfw-3.0.3\include\GLFW;..\external\3rdParty\glm-0.9.4.0;..\external\3rdParty\glew-1.9.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glu32.lib;opengl32.lib;..\external\3rdParty\Debug\glfw3.lib;..\external\3rdParty\Debug\GLEW_190.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;..\external\3rdParty\Debug\glfw3.lib;..\external\3rdParty\Debug\GLEW_190.lib;..\external\3rdParty\assimp\lib64\assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -73,12 +73,19 @@
     <ClCompile Include="..\external\common\shader.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\tutorial_1.cpp" />
+    <ClCompile Include="tutorial_2.cpp" />
+    <ClCompile Include="tutorial_3.cpp" />
+    <ClCompile Include="tutorial_4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\shaders\BasicColorToColorShader.frag" />
-    <None Include="..\external\shaders\basic\triangles.frag" />
-    <None Include="..\external\shaders\basic\triangles.vert" />
     <None Include="..\external\shaders\TransformVertexShader.vert" />
+    <None Include="..\external\shaders\tutorial2.frag" />
+    <None Include="..\external\shaders\tutorial2.vert" />
+    <None Include="..\external\shaders\tutorial3.frag" />
+    <None Include="..\external\shaders\tutorial3.vert" />
+    <None Include="..\external\shaders\tutorial4.frag" />
+    <None Include="..\external\shaders\tutorial4.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\external\common\shader.hpp" />

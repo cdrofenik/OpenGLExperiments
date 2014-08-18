@@ -16,6 +16,18 @@
     <Filter Include="Externals">
       <UniqueIdentifier>{cd35ff08-8255-48af-8230-f6055f03334f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders">
+      <UniqueIdentifier>{dffb9978-04d4-4599-bd2b-9935262313c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\tutorial2">
+      <UniqueIdentifier>{569a924e-3b3d-45ed-8d8c-214ee4e438ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\tutorial3">
+      <UniqueIdentifier>{4a57b453-3af6-44fb-bc2a-9abaf16382f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\tutorial4">
+      <UniqueIdentifier>{5988de82-f253-4a07-8f0a-7b6962878ffc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\external\common\shader.cpp">
@@ -27,6 +39,15 @@
     <ClCompile Include="..\src\tutorial_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tutorial_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial_4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\shaders\BasicColorToColorShader.frag">
@@ -35,11 +56,23 @@
     <None Include="..\external\shaders\TransformVertexShader.vert">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="..\external\shaders\basic\triangles.frag">
-      <Filter>Resource Files</Filter>
+    <None Include="..\external\shaders\tutorial2.frag">
+      <Filter>Resource Files\shaders\tutorial2</Filter>
     </None>
-    <None Include="..\external\shaders\basic\triangles.vert">
-      <Filter>Resource Files</Filter>
+    <None Include="..\external\shaders\tutorial2.vert">
+      <Filter>Resource Files\shaders\tutorial2</Filter>
+    </None>
+    <None Include="..\external\shaders\tutorial3.frag">
+      <Filter>Resource Files\shaders\tutorial3</Filter>
+    </None>
+    <None Include="..\external\shaders\tutorial3.vert">
+      <Filter>Resource Files\shaders\tutorial3</Filter>
+    </None>
+    <None Include="..\external\shaders\tutorial4.frag">
+      <Filter>Resource Files\shaders\tutorial4</Filter>
+    </None>
+    <None Include="..\external\shaders\tutorial4.vert">
+      <Filter>Resource Files\shaders\tutorial4</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
