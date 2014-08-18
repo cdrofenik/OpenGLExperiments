@@ -71,11 +71,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\external\common\shader.cpp" />
-    <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\tutorial_1.cpp" />
-    <ClCompile Include="tutorial_2.cpp" />
-    <ClCompile Include="tutorial_3.cpp" />
-    <ClCompile Include="tutorial_4.cpp" />
+    <ClCompile Include="..\src\tutorial_2.cpp" />
+    <ClCompile Include="..\src\tutorial_3.cpp" />
+    <ClCompile Include="..\src\tutorial_4.cpp" />
+    <ClCompile Include="..\src\tutorial_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\shaders\BasicColorToColorShader.frag" />
