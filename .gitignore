@@ -1,2 +1,13 @@
-OpenGLExperiments.sdf
-OpenGLExperiments.v12.suo
+*.exe
+*.ilk
+*.pdb
+*.log
+*.tlog
+*.obj
+*.idb
+*.suo
+*.cache
+*.sdf
+*.vcxproj
+*.vcxproj
+*.vcxproj
