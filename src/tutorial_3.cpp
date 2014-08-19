@@ -110,6 +110,11 @@ int tutorial_3(GLFWwindow* window)
 	while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 	glfwWindowShouldClose(window) == 0);
 
+	// Cleanup VBO and shader
+	glDeleteBuffers(1, &vertexbuffer);
+	glDeleteProgram(programID);
+	glDeleteVertexArrays(1, &VertexArrayID);
+
 	// Close OpenGL window and terminate GLFW
 	glfwTerminate();
 
