@@ -60,11 +60,11 @@
     <ClCompile Include="..\external\common\texture.cpp">
       <Filter>Externals</Filter>
     </ClCompile>
-    <ClCompile Include="tutorial6.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\external\common\controls.cpp">
       <Filter>Externals</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial_6.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
