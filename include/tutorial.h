@@ -12,6 +12,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
+//Will be implemented locally at some point
 #include "..\..\common\shader.hpp"
 #include "..\..\common\texture.hpp"
 
@@ -24,3 +25,5 @@ int tutorial_3(GLFWwindow* window);
 int tutorial_4(GLFWwindow* window);
 
 int tutorial_5(GLFWwindow* window);
+
+int tutorial_6(GLFWwindow* window);

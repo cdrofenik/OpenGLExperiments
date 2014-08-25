@@ -77,6 +77,7 @@
     <ClCompile Include="..\src\tutorial_3.cpp" />
     <ClCompile Include="..\src\tutorial_4.cpp" />
     <ClCompile Include="..\src\tutorial_main.cpp" />
+    <ClCompile Include="tutorial6.cpp" />
     <ClCompile Include="tutorial_5.cpp" />
   </ItemGroup>
   <ItemGroup>
