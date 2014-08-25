@@ -15,6 +15,7 @@
 //Will be implemented locally at some point
 #include "..\..\common\shader.hpp"
 #include "..\..\common\texture.hpp"
+#include "..\..\common\controls.hpp"
 
 int tutorial_1(GLFWwindow* window);
 

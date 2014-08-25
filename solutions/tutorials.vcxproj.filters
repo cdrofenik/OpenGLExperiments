@@ -63,6 +63,9 @@
     <ClCompile Include="tutorial6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\external\common\controls.cpp">
+      <Filter>Externals</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\shaders\tutorial2.frag">
@@ -98,6 +101,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\external\common\texture.hpp">
+      <Filter>Externals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\common\controls.hpp">
       <Filter>Externals</Filter>
     </ClInclude>
   </ItemGroup>

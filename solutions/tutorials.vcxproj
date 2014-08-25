@@ -70,6 +70,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\external\common\controls.cpp" />
     <ClCompile Include="..\external\common\shader.cpp" />
     <ClCompile Include="..\external\common\texture.cpp" />
     <ClCompile Include="..\src\tutorial_1.cpp" />
@@ -91,6 +92,7 @@
     <None Include="..\external\shaders\tutorial5.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\external\common\controls.hpp" />
     <ClInclude Include="..\external\common\shader.hpp" />
     <ClInclude Include="..\external\common\texture.hpp" />
     <ClInclude Include="..\include\tutorial.h" />
