@@ -13,7 +13,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "..\..\common\shader.hpp"
-
+#include "..\..\common\texture.hpp"
 
 int tutorial_1(GLFWwindow* window);
 
@@ -22,3 +22,5 @@ int tutorial_2(GLFWwindow* window);
 int tutorial_3(GLFWwindow* window);
 
 int tutorial_4(GLFWwindow* window);
+
+int tutorial_5(GLFWwindow* window);

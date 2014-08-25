@@ -17,10 +17,11 @@ int main()
 		cout << "(1) : Basic window (OpenGL initialization)" << endl;
 		cout << "(2) : Basic triangle" << endl;
 		cout << "(3) : Perspective triangle" << endl;
-		cout << "(4) : Perspective cube\n" << endl;
+		cout << "(4) : Perspective cube" << endl;
+		cout << "(5) : Textured cube" << endl;
 		//TODO: add other choices
 
-		cout << "Your choice: ";
+		cout << "\nYour choice: ";
 		cin >> input;
 
 		switch (input)
@@ -36,6 +37,9 @@ int main()
 				break;
 			case 4:
 				tutorial_4(window);
+				break;
+			case 5:
+				tutorial_5(window);
 				break;
 		}
 	}

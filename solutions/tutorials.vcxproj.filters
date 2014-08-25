@@ -28,6 +28,12 @@
     <Filter Include="Resource Files\shaders\tutorial4">
       <UniqueIdentifier>{5988de82-f253-4a07-8f0a-7b6962878ffc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders\tutorial5">
+      <UniqueIdentifier>{ba7a280d-56fd-44a8-8bc0-f3653c73696c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{998969b0-70ee-45e8-a786-6b9bfdbfa9e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\external\common\shader.cpp">
@@ -48,14 +54,14 @@
     <ClCompile Include="..\src\tutorial_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tutorial_5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\common\texture.cpp">
+      <Filter>Externals</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\external\shaders\BasicColorToColorShader.frag">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\external\shaders\TransformVertexShader.vert">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="..\external\shaders\tutorial2.frag">
       <Filter>Resource Files\shaders\tutorial2</Filter>
     </None>
@@ -74,6 +80,12 @@
     <None Include="..\external\shaders\tutorial4.vert">
       <Filter>Resource Files\shaders\tutorial4</Filter>
     </None>
+    <None Include="..\external\shaders\tutorial5.frag">
+      <Filter>Resource Files\shaders\tutorial5</Filter>
+    </None>
+    <None Include="..\external\shaders\tutorial5.vert">
+      <Filter>Resource Files\shaders\tutorial5</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\external\common\shader.hpp">
@@ -82,5 +94,19 @@
     <ClInclude Include="..\include\tutorial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\external\common\texture.hpp">
+      <Filter>Externals</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\external\textures\uvtemplate.bmp">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="..\external\textures\uvtemplate.DDS">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="..\external\textures\uvtemplate.tga">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>
