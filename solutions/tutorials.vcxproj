@@ -80,6 +80,7 @@
     <ClCompile Include="..\src\tutorial_main.cpp" />
     <ClCompile Include="tutorial_6.cpp" />
     <ClCompile Include="tutorial_5.cpp" />
+    <ClCompile Include="tutorial_7.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\shaders\tutorial2.frag" />
