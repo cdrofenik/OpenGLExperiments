@@ -1,5 +1,9 @@
 #include "tutorial.h"
 
+#include "../external/common/objloader.hpp"
+
+#include <vector>
+
 int tutorial_7(GLFWwindow* window)
 {
 	// Initialise GLFW
@@ -61,104 +65,31 @@ int tutorial_7(GLFWwindow* window)
 	// Get a handle for our "myTextureSampler" uniform
 	GLuint TextureID = glGetUniformLocation(programID, "myTextureSampler");
 
-	// Our vertices. Tree consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
-	// A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
-	static const GLfloat g_vertex_buffer_data[] = {
-		-1.0f, -1.0f, -1.0f,
-		-1.0f, -1.0f, 1.0f,
-		-1.0f, 1.0f, 1.0f,
-		1.0f, 1.0f, -1.0f,
-		-1.0f, -1.0f, -1.0f,
-		-1.0f, 1.0f, -1.0f,
-		1.0f, -1.0f, 1.0f,
-		-1.0f, -1.0f, -1.0f,
-		1.0f, -1.0f, -1.0f,
-		1.0f, 1.0f, -1.0f,
-		1.0f, -1.0f, -1.0f,
-		-1.0f, -1.0f, -1.0f,
-		-1.0f, -1.0f, -1.0f,
-		-1.0f, 1.0f, 1.0f,
-		-1.0f, 1.0f, -1.0f,
-		1.0f, -1.0f, 1.0f,
-		-1.0f, -1.0f, 1.0f,
-		-1.0f, -1.0f, -1.0f,
-		-1.0f, 1.0f, 1.0f,
-		-1.0f, -1.0f, 1.0f,
-		1.0f, -1.0f, 1.0f,
-		1.0f, 1.0f, 1.0f,
-		1.0f, -1.0f, -1.0f,
-		1.0f, 1.0f, -1.0f,
-		1.0f, -1.0f, -1.0f,
-		1.0f, 1.0f, 1.0f,
-		1.0f, -1.0f, 1.0f,
-		1.0f, 1.0f, 1.0f,
-		1.0f, 1.0f, -1.0f,
-		-1.0f, 1.0f, -1.0f,
-		1.0f, 1.0f, 1.0f,
-		-1.0f, 1.0f, -1.0f,
-		-1.0f, 1.0f, 1.0f,
-		1.0f, 1.0f, 1.0f,
-		-1.0f, 1.0f, 1.0f,
-		1.0f, -1.0f, 1.0f
-	};
+	// Read our .obj file
+	std::vector<glm::vec3> vertices;
+	std::vector<glm::vec2> uvs;
+	std::vector<glm::vec3> normals; // Won't be used at the moment.
+	bool res = loadOBJ("..\\external\\objects\\cube.obj", vertices, uvs, normals);
 
-	// Two UV coordinatesfor each vertex. They were created with Blender. You'll learn shortly how to do this yourself.
-	static const GLfloat g_uv_buffer_data[] = {
-		0.000059f, 1.0f - 0.000004f,
-		0.000103f, 1.0f - 0.336048f,
-		0.335973f, 1.0f - 0.335903f,
-		1.000023f, 1.0f - 0.000013f,
-		0.667979f, 1.0f - 0.335851f,
-		0.999958f, 1.0f - 0.336064f,
-		0.667979f, 1.0f - 0.335851f,
-		0.336024f, 1.0f - 0.671877f,
-		0.667969f, 1.0f - 0.671889f,
-		1.000023f, 1.0f - 0.000013f,
-		0.668104f, 1.0f - 0.000013f,
-		0.667979f, 1.0f - 0.335851f,
-		0.000059f, 1.0f - 0.000004f,
-		0.335973f, 1.0f - 0.335903f,
-		0.336098f, 1.0f - 0.000071f,
-		0.667979f, 1.0f - 0.335851f,
-		0.335973f, 1.0f - 0.335903f,
-		0.336024f, 1.0f - 0.671877f,
-		1.000004f, 1.0f - 0.671847f,
-		0.999958f, 1.0f - 0.336064f,
-		0.667979f, 1.0f - 0.335851f,
-		0.668104f, 1.0f - 0.000013f,
-		0.335973f, 1.0f - 0.335903f,
-		0.667979f, 1.0f - 0.335851f,
-		0.335973f, 1.0f - 0.335903f,
-		0.668104f, 1.0f - 0.000013f,
-		0.336098f, 1.0f - 0.000071f,
-		0.000103f, 1.0f - 0.336048f,
-		0.000004f, 1.0f - 0.671870f,
-		0.336024f, 1.0f - 0.671877f,
-		0.000103f, 1.0f - 0.336048f,
-		0.336024f, 1.0f - 0.671877f,
-		0.335973f, 1.0f - 0.335903f,
-		0.667969f, 1.0f - 0.671889f,
-		1.000004f, 1.0f - 0.671847f,
-		0.667979f, 1.0f - 0.335851f
-	};
+	// Load it into a VBO
 
-	// This will identify our vertex buffer
 	GLuint vertexbuffer;
-	glGenBuffers(1, &vertexbuffer); // Generate 1 buffer, put the resulting identifier in vertexbuffer
-	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer); // The following commands will talk about our 'vertexbuffer' buffer
-	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW); // Give our vertices to OpenGL.
+	glGenBuffers(1, &vertexbuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
+	glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(glm::vec3), &vertices[0], GL_STATIC_DRAW);
 
-	GLuint texBuffer;
-	glGenBuffers(1, &texBuffer);
-	glBindBuffer(GL_ARRAY_BUFFER, texBuffer);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(g_uv_buffer_data), g_uv_buffer_data, GL_STATIC_DRAW);
+	GLuint uvbuffer;
+	glGenBuffers(1, &uvbuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, uvbuffer);
+	glBufferData(GL_ARRAY_BUFFER, uvs.size() * sizeof(glm::vec2), &uvs[0], GL_STATIC_DRAW);
 
-	// Use our shader
-	glUseProgram(programID);
 
 	do{
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		// Use our shader
+		glUseProgram(programID);
 
 		// Compute the MVP matrix from keyboard and mouse input
 		computeMatricesFromInputs(window);
@@ -191,7 +122,7 @@ int tutorial_7(GLFWwindow* window)
 
 		// 2nd attribute buffer : UVs
 		glEnableVertexAttribArray(1);
-		glBindBuffer(GL_ARRAY_BUFFER, texBuffer);
+		glBindBuffer(GL_ARRAY_BUFFER, uvbuffer);
 		glVertexAttribPointer(
 			1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
 			2,                                // size : U+V => 2
@@ -203,7 +134,7 @@ int tutorial_7(GLFWwindow* window)
 
 
 		// Draw the triangle !
-		glDrawArrays(GL_TRIANGLES, 0, 12 * 3); // 12*3 indices starting at 0 -> 12 triangles
+		glDrawArrays(GL_TRIANGLES, 0, vertices.size());
 
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
@@ -218,7 +149,7 @@ int tutorial_7(GLFWwindow* window)
 
 	// Cleanup VBO and shader
 	glDeleteBuffers(1, &vertexbuffer);
-	glDeleteBuffers(1, &texBuffer);
+	glDeleteBuffers(1, &uvbuffer);
 	glDeleteProgram(programID);
 	glDeleteVertexArrays(1, &TextureID);
 	glDeleteVertexArrays(1, &VertexArrayID);

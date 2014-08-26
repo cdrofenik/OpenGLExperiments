@@ -54,20 +54,23 @@
     <ClCompile Include="..\src\tutorial_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tutorial_5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\external\common\texture.cpp">
       <Filter>Externals</Filter>
     </ClCompile>
     <ClCompile Include="..\external\common\controls.cpp">
       <Filter>Externals</Filter>
     </ClCompile>
-    <ClCompile Include="tutorial_6.cpp">
+    <ClCompile Include="..\src\tutorial_7.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tutorial_7.cpp">
+    <ClCompile Include="..\src\tutorial_5.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tutorial_6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\common\objloader.cpp">
+      <Filter>Externals</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +110,9 @@
       <Filter>Externals</Filter>
     </ClInclude>
     <ClInclude Include="..\external\common\controls.hpp">
+      <Filter>Externals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\common\objloader.hpp">
       <Filter>Externals</Filter>
     </ClInclude>
   </ItemGroup>

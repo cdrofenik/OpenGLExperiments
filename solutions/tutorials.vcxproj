@@ -71,16 +71,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\external\common\controls.cpp" />
+    <ClCompile Include="..\external\common\objloader.cpp" />
     <ClCompile Include="..\external\common\shader.cpp" />
     <ClCompile Include="..\external\common\texture.cpp" />
     <ClCompile Include="..\src\tutorial_1.cpp" />
     <ClCompile Include="..\src\tutorial_2.cpp" />
     <ClCompile Include="..\src\tutorial_3.cpp" />
     <ClCompile Include="..\src\tutorial_4.cpp" />
+    <ClCompile Include="..\src\tutorial_5.cpp" />
+    <ClCompile Include="..\src\tutorial_6.cpp" />
+    <ClCompile Include="..\src\tutorial_7.cpp" />
     <ClCompile Include="..\src\tutorial_main.cpp" />
-    <ClCompile Include="tutorial_6.cpp" />
-    <ClCompile Include="tutorial_5.cpp" />
-    <ClCompile Include="tutorial_7.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\shaders\tutorial2.frag" />
@@ -94,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\external\common\controls.hpp" />
+    <ClInclude Include="..\external\common\objloader.hpp" />
     <ClInclude Include="..\external\common\shader.hpp" />
     <ClInclude Include="..\external\common\texture.hpp" />
     <ClInclude Include="..\include\tutorial.h" />
