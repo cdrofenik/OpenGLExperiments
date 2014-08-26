@@ -10,7 +10,6 @@ Visual Studio generated
 *.pdb
 *.log
 *.tlog
-*.obj
 *.idb
 *.suo
 *.sdf
