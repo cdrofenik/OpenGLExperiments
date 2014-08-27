@@ -34,6 +34,9 @@
     <Filter Include="Resource Files\textures">
       <UniqueIdentifier>{998969b0-70ee-45e8-a786-6b9bfdbfa9e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders\tutorial8">
+      <UniqueIdentifier>{37ecddea-10eb-4eb4-966a-dc945cf61980}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\external\common\shader.cpp">
@@ -60,17 +63,23 @@
     <ClCompile Include="..\external\common\controls.cpp">
       <Filter>Externals</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\tutorial_7.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\tutorial_5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\tutorial_6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\external\common\objloader.cpp">
       <Filter>Externals</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial_9_VBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial_8_Shading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tutorial_7_ObjLoading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tutorial_6_KeyboardInput.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +106,12 @@
     </None>
     <None Include="..\external\shaders\tutorial5.vert">
       <Filter>Resource Files\shaders\tutorial5</Filter>
+    </None>
+    <None Include="..\external\shaders\tutorial8.frag">
+      <Filter>Resource Files\shaders\tutorial8</Filter>
+    </None>
+    <None Include="..\external\shaders\tutorial8.vert">
+      <Filter>Resource Files\shaders\tutorial8</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

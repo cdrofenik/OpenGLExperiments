@@ -30,3 +30,5 @@ int tutorial_5(GLFWwindow* window);
 int tutorial_6(GLFWwindow* window);
 
 int tutorial_7(GLFWwindow* window);
+
+int tutorial_8(GLFWwindow* window);

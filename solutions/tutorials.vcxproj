@@ -79,9 +79,11 @@
     <ClCompile Include="..\src\tutorial_3.cpp" />
     <ClCompile Include="..\src\tutorial_4.cpp" />
     <ClCompile Include="..\src\tutorial_5.cpp" />
-    <ClCompile Include="..\src\tutorial_6.cpp" />
-    <ClCompile Include="..\src\tutorial_7.cpp" />
+    <ClCompile Include="..\src\tutorial_6_KeyboardInput.cpp" />
+    <ClCompile Include="..\src\tutorial_7_ObjLoading.cpp" />
     <ClCompile Include="..\src\tutorial_main.cpp" />
+    <ClCompile Include="tutorial_8_Shading.cpp" />
+    <ClCompile Include="tutorial_9_VBO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\external\shaders\tutorial2.frag" />
@@ -92,6 +94,8 @@
     <None Include="..\external\shaders\tutorial4.vert" />
     <None Include="..\external\shaders\tutorial5.frag" />
     <None Include="..\external\shaders\tutorial5.vert" />
+    <None Include="..\external\shaders\tutorial8.frag" />
+    <None Include="..\external\shaders\tutorial8.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\external\common\controls.hpp" />

@@ -21,6 +21,7 @@ int main()
 		cout << "(5) : Textured cube" << endl;
 		cout << "(6) : Keyboard and mouse movement" << endl;
 		cout << "(7) : Model loading" << endl;
+		cout << "(8) : Basic shading" << endl;
 		//TODO: add other choices
 
 		cout << "\nYour choice: ";
@@ -48,6 +49,9 @@ int main()
 				break;
 			case 7:
 				tutorial_7(window);
+				break;
+			case 8:
+				tutorial_8(window);
 				break;
 		}
 	}
