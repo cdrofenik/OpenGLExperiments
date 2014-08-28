@@ -73,19 +73,27 @@
     <ClCompile Include="..\external\common\controls.cpp" />
     <ClCompile Include="..\external\common\objloader.cpp" />
     <ClCompile Include="..\external\common\shader.cpp" />
+    <ClCompile Include="..\external\common\text2D.cpp" />
     <ClCompile Include="..\external\common\texture.cpp" />
+    <ClCompile Include="..\external\common\vboindexer.cpp" />
     <ClCompile Include="..\src\tutorial_1.cpp" />
+    <ClCompile Include="..\src\tutorial_10_Transparency.cpp" />
+    <ClCompile Include="..\src\tutorial_11_2DText.cpp" />
     <ClCompile Include="..\src\tutorial_2.cpp" />
     <ClCompile Include="..\src\tutorial_3.cpp" />
     <ClCompile Include="..\src\tutorial_4.cpp" />
     <ClCompile Include="..\src\tutorial_5.cpp" />
     <ClCompile Include="..\src\tutorial_6_KeyboardInput.cpp" />
     <ClCompile Include="..\src\tutorial_7_ObjLoading.cpp" />
+    <ClCompile Include="..\src\tutorial_8_Shading.cpp" />
+    <ClCompile Include="..\src\tutorial_9_VBO.cpp" />
     <ClCompile Include="..\src\tutorial_main.cpp" />
-    <ClCompile Include="tutorial_8_Shading.cpp" />
-    <ClCompile Include="tutorial_9_VBO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\external\shaders\textShader.frag" />
+    <None Include="..\external\shaders\textShader.vert" />
+    <None Include="..\external\shaders\tutorial10.frag" />
+    <None Include="..\external\shaders\tutorial10.vert" />
     <None Include="..\external\shaders\tutorial2.frag" />
     <None Include="..\external\shaders\tutorial2.vert" />
     <None Include="..\external\shaders\tutorial3.frag" />
@@ -101,7 +109,9 @@
     <ClInclude Include="..\external\common\controls.hpp" />
     <ClInclude Include="..\external\common\objloader.hpp" />
     <ClInclude Include="..\external\common\shader.hpp" />
+    <ClInclude Include="..\external\common\text2D.hpp" />
     <ClInclude Include="..\external\common\texture.hpp" />
+    <ClInclude Include="..\external\common\vboindexer.hpp" />
     <ClInclude Include="..\include\tutorial.h" />
   </ItemGroup>
   <ItemGroup>

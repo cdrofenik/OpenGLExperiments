@@ -43,7 +43,7 @@ void computeMatricesFromInputs(GLFWwindow* window){
 	double currentTime = glfwGetTime();
 	float deltaTime = float(currentTime - lastTime);
 
-	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
 
 	// Get mouse position
 	double xpos, ypos;
@@ -100,6 +100,8 @@ void computeMatricesFromInputs(GLFWwindow* window){
 								position+direction, // and looks here : at the same position, plus "direction"
 								up                  // Head is up (set to 0,-1,0 to look upside-down)
 						   );
+
+	//printf("Position x: %f  y: %f z: %f\n", position.x, position.y, position.z);
 
 	// For the next frame, the "last time" will be "now"
 	lastTime = currentTime;

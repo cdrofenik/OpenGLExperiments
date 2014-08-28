@@ -1,7 +1,5 @@
 #include "tutorial.h"
 
-#include "../external/common/objloader.hpp"
-
 #include <vector>
 
 int tutorial_8(GLFWwindow* window)
@@ -20,7 +18,7 @@ int tutorial_8(GLFWwindow* window)
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL 
 
 	// Open a window and create its OpenGL context
-	window = glfwCreateWindow(1024, 768, "Tutorial 7: Basic shading", NULL, NULL); // (In the accompanying source code, this variable is global) 
+	window = glfwCreateWindow(1024, 768, "Tutorial 8: Basic shading", NULL, NULL); // (In the accompanying source code, this variable is global) 
 	if (window == NULL){
 		fprintf(stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n");
 		glfwTerminate();
@@ -53,7 +51,7 @@ int tutorial_8(GLFWwindow* window)
 	glBindVertexArray(VertexArrayID);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint programID = LoadShaders("..\\external\\shaders\\tutorial5.vert", "..\\external\\shaders\\tutorial5.frag");
+	GLuint programID = LoadShaders("..\\external\\shaders\\tutorial8.vert", "..\\external\\shaders\\tutorial8.frag");
 
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");

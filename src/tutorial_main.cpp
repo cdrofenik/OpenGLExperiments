@@ -22,6 +22,9 @@ int main()
 		cout << "(6) : Keyboard and mouse movement" << endl;
 		cout << "(7) : Model loading" << endl;
 		cout << "(8) : Basic shading" << endl;
+		cout << "(9) : VBO" << endl;
+		cout << "(10) : Transparency" << endl;
+		cout << "(11) : 2D Text" << endl;
 		//TODO: add other choices
 
 		cout << "\nYour choice: ";
@@ -52,6 +55,15 @@ int main()
 				break;
 			case 8:
 				tutorial_8(window);
+				break;
+			case 9:
+				tutorial_9(window);
+				break;
+			case 10:
+				tutorial_10(window);
+				break;
+			case 11:
+				tutorial_11(window);
 				break;
 		}
 	}

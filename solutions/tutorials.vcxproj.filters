@@ -37,6 +37,12 @@
     <Filter Include="Resource Files\shaders\tutorial8">
       <UniqueIdentifier>{37ecddea-10eb-4eb4-966a-dc945cf61980}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\shaders\tutorial10">
+      <UniqueIdentifier>{c3fe6a24-895e-40d6-8306-60e3d802c2d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\shaders\tutorial11">
+      <UniqueIdentifier>{86cc3ebf-3e2b-4fee-aaa3-1b6ff3147950}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\external\common\shader.cpp">
@@ -69,16 +75,28 @@
     <ClCompile Include="..\external\common\objloader.cpp">
       <Filter>Externals</Filter>
     </ClCompile>
-    <ClCompile Include="tutorial_9_VBO.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorial_8_Shading.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\tutorial_7_ObjLoading.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\tutorial_6_KeyboardInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\common\vboindexer.cpp">
+      <Filter>Externals</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\common\text2D.cpp">
+      <Filter>Externals</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tutorial_8_Shading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tutorial_9_VBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tutorial_10_Transparency.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tutorial_11_2DText.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -113,6 +131,18 @@
     <None Include="..\external\shaders\tutorial8.vert">
       <Filter>Resource Files\shaders\tutorial8</Filter>
     </None>
+    <None Include="..\external\shaders\tutorial10.frag">
+      <Filter>Resource Files\shaders\tutorial10</Filter>
+    </None>
+    <None Include="..\external\shaders\tutorial10.vert">
+      <Filter>Resource Files\shaders\tutorial10</Filter>
+    </None>
+    <None Include="..\external\shaders\textShader.frag">
+      <Filter>Resource Files\shaders\tutorial11</Filter>
+    </None>
+    <None Include="..\external\shaders\textShader.vert">
+      <Filter>Resource Files\shaders\tutorial11</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\external\common\shader.hpp">
@@ -128,6 +158,12 @@
       <Filter>Externals</Filter>
     </ClInclude>
     <ClInclude Include="..\external\common\objloader.hpp">
+      <Filter>Externals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\common\vboindexer.hpp">
+      <Filter>Externals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\common\text2D.hpp">
       <Filter>Externals</Filter>
     </ClInclude>
   </ItemGroup>

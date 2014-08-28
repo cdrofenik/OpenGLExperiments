@@ -205,6 +205,7 @@ GLuint loadDDS(const char * imagepath){
 
 	free(buffer); 
 
+	printf("Texture %s loaded\n", imagepath);
 	return textureID;
 
 
